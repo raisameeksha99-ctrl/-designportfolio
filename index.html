@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UX/UI Portfolio — Sameeksha Rai. Human-centred design, research, and product thinking." />
+  <title>Sameeksha Rai — UX Designer</title>
+
+  <!-- Inter from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="css/design-system.css" />
+
+  <style>
+    /* ── page-specific styles ── */
+
+    /* Hero */
+    #hero {
+      padding-top: var(--sp-16);
+      padding-bottom: var(--sp-12);
+    }
+    .hero__availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: var(--text-xs);
+      font-weight: var(--fw-medium);
+      color: #2D7D46;
+      background: #EDFBF2;
+      padding: 5px 12px;
+      border-radius: var(--r-sm);
+      margin-bottom: var(--sp-4);
+    }
+    .hero__availability::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #2D7D46;
+      flex-shrink: 0;
+    }
+    #hero h1 {
+      font-size: clamp(2rem, 5vw, var(--text-4xl));
+      max-width: 18ch;
+      margin-bottom: var(--sp-3);
+      line-height: 1.15;
+    }
+    .hero__sub {
+      font-size: var(--text-lg);
+      color: var(--c-text-2);
+      max-width: 46ch;
+      line-height: var(--lh-prose);
+      margin-bottom: var(--sp-5);
+    }
+    .hero__actions {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+      flex-wrap: wrap;
+    }
+
+    /* Work grid */
+    #work { padding-top: var(--sp-4); }
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-3);
+      margin-top: var(--sp-4);
+    }
+    .work-grid .card:first-child {
+      grid-column: 1 / -1; /* featured spans full */
+    }
+    @media (max-width: 640px) {
+      .work-grid { grid-template-columns: 1fr; }
+      .work-grid .card:first-child { grid-column: 1; }
+    }
+
+    /* Card image placeholder */
+    .card__image--placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card__image--placeholder span {
+      font-size: var(--text-xs);
+      color: var(--c-text-3);
+      letter-spacing: 0.04em;
+    }
+
+    /* About strip */
+    #about {
+      border-top: 1px solid var(--c-border);
+      border-bottom: 1px solid var(--c-border);
+      background: var(--c-surface);
+    }
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-10);
+      align-items: start;
+    }
+    @media (max-width: 640px) {
+      .about__grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+    }
+    .about__intro h2 {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--sp-3);
+    }
+    .about__intro p { max-width: 100%; }
+    .about__intro p + p { margin-top: var(--sp-3); }
+
+    /* Process inline */
+    #process .section-header h2 { font-size: var(--text-2xl); }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">Sameeksha Rai</a>
+        <ul class="navbar__links" role="list">
+          <li><a href="#work"    class="navbar__link">Work</a></li>
+          <li><a href="#process" class="navbar__link">Process</a></li>
+          <li><a href="#about"   class="navbar__link">About</a></li>
+          <li>
+            <a href="mailto:hello@sameeksharai.com" class="btn btn--primary">
+              Say hello
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <main>
+    <section id="hero">
+      <div class="container">
+
+        <div class="hero__availability" aria-label="Currently available for opportunities">
+          Open to opportunities
+        </div>
+
+        <h1>Designing products people actually want to use.</h1>
+
+        <p class="hero__sub">
+          I'm a UX/UI designer focused on research-backed, human-centred design —
+          turning complex problems into clear, usable experiences.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary">View my work</a>
+          <a href="#about" class="btn btn--secondary">About me</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════ WORK ═══════════ -->
+    <section id="work">
+      <div class="container--wide">
+
+        <div class="section-header">
+          <span class="eyebrow">Selected work</span>
+          <h2>Case studies</h2>
+          <p>End-to-end projects from research through final design.</p>
+        </div>
+
+        <div class="work-grid">
+
+          <!-- Featured card -->
+          <a href="case-studies/research/" class="card" aria-label="Case study: Redesigning the Research Workflow">
+            <div class="card__image card__image--placeholder" style="background:#EEF2FD; min-height: 280px;">
+              <span class="label">Research Case Study</span>
+            </div>
+            <div class="card__body">
+              <div class="card__tags">
+                <span class="tag">UX Research</span>
+                <span class="tag">Information Architecture</span>
+                <span class="tag">Usability Testing</span>
+              </div>
+              <h3 class="card__title">Redesigning the Research Workflow</h3>
+              <p class="card__desc">
+                How I reduced researcher onboarding time by 40% by restructuring
+                information architecture and simplifying navigation patterns.
+              </p>
+              <div class="card__meta">
+                <span class="card__meta-item">Research · Design · Testing</span>
+                <span class="btn btn--ghost">Read case study</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="case-studies/hybrid/" class="card" aria-label="Case study: Hybrid Work Experience">
+            <div class="card__image card__image--placeholder" style="background:#F5F0FF; min-height: 200px;">
+              <span class="label">Hybrid Work</span>
+            </div>
+            <div class="card__body">
+              <div class="card__tags">
+                <span class="tag">Product Design</span>
+                <span class="tag">User Research</span>
+              </div>
+              <h3 class="card__title">Hybrid Work Experience</h3>
+              <p class="card__desc">
+                Designing for distributed teams — balancing flexibility with
+                structured collaboration patterns.
+              </p>
+              <div class="card__meta">
+                <span class="card__meta-item">2024</span>
+                <span class="btn btn--ghost">Read case study</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="case-studies/ui-design/" class="card" aria-label="Case study: Design System & UI">
+            <div class="card__image card__image--placeholder" style="background:#FFF8EE; min-height: 200px;">
+              <span class="label">UI Design</span>
+            </div>
+            <div class="card__body">
+              <div class="card__tags">
+                <span class="tag">UI Design</span>
+                <span class="tag">Design Systems</span>
+              </div>
+              <h3 class="card__title">Building a Design System</h3>
+              <p class="card__desc">
+                Creating a scalable component library from scratch to unify
+                product experience across 4 platforms.
+              </p>
+              <div class="card__meta">
+                <span class="card__meta-item">2024</span>
+                <span class="btn btn--ghost">Read case study</span>
+              </div>
+            </div>
+          </a>
+
+        </div><!-- /work-grid -->
+      </div>
+    </section>
+
+
+    <hr class="divider" style="margin: 0;" />
+
+
+    <!-- ═══════════ PROCESS ═══════════ -->
+    <section id="process">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="eyebrow">How I work</span>
+          <h2>Design process</h2>
+          <p>A human-centred, iterative approach — looping back as needed.</p>
+        </div>
+
+        <ol class="process-list" role="list">
+
+          <li class="process-step">
+            <span class="process-step__num">01</span>
+            <div>
+              <h4 class="process-step__title">Empathize</h4>
+              <p class="process-step__desc">
+                Stakeholder interviews, user research, empathy maps.
+                I don't assume — I go find out.
+              </p>
+            </div>
+          </li>
+
+          <li class="process-step">
+            <span class="process-step__num">02</span>
+            <div>
+              <h4 class="process-step__title">Define</h4>
+              <p class="process-step__desc">
+                Affinity diagrams, personas, journey maps, "How Might We" statements.
+                Frame the right problem before solving it.
+              </p>
+            </div>
+          </li>
+
+          <li class="process-step">
+            <span class="process-step__num">03</span>
+            <div>
+              <h4 class="process-step__title">Ideate</h4>
+              <p class="process-step__desc">
+                Crazy 8s, user flows, IA diagrams. Generate wide,
+                then narrow through constraints.
+              </p>
+            </div>
+          </li>
+
+          <li class="process-step">
+            <span class="process-step__num">04</span>
+            <div>
+              <h4 class="process-step__title">Prototype</h4>
+              <p class="process-step__desc">
+                Lo-fi wireframes → hi-fi mockups → interactive Figma prototypes.
+                Make it tangible before investing in build.
+              </p>
+            </div>
+          </li>
+
+          <li class="process-step">
+            <span class="process-step__num">05</span>
+            <div>
+              <h4 class="process-step__title">Test & Iterate</h4>
+              <p class="process-step__desc">
+                Usability testing with 5–8 participants, documented findings,
+                prioritised fixes. Design is never done in one pass.
+              </p>
+            </div>
+          </li>
+
+        </ol>
+
+        <div style="margin-top: var(--sp-5);">
+          <a href="about-me/design-process.md" class="btn btn--ghost">
+            Full process breakdown
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <hr class="divider" style="margin: 0;" />
+
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section id="about">
+      <div class="container--wide">
+        <div class="about__grid">
+
+          <div class="about__intro">
+            <span class="eyebrow">About me</span>
+            <h2>I design for the people who use the product.</h2>
+            <p>
+              I'm Sameeksha — a UX/UI designer with a background in human-centred
+              research. I care about understanding people's real contexts before
+              picking up a design tool.
+            </p>
+            <p>
+              My work lives in the space between research and execution — I translate
+              findings into clear, tested interfaces that ship.
+            </p>
+            <div style="margin-top: var(--sp-4); display: flex; gap: var(--sp-2);">
+              <a href="mailto:hello@sameeksharai.com" class="btn btn--primary">Get in touch</a>
+              <a href="#" class="btn btn--secondary">Download CV</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 style="margin-bottom: var(--sp-3); font-size: var(--text-base);">Tools &amp; skills</h4>
+            <ul style="display: flex; flex-direction: column; gap: 0;" role="list">
+              <li style="padding: 12px 0; border-bottom: 1px solid var(--c-border); font-size: var(--text-sm); color: var(--c-text-2);">
+                <strong>Design</strong> — Figma, Adobe XD, FigJam
+              </li>
+              <li style="padding: 12px 0; border-bottom: 1px solid var(--c-border); font-size: var(--text-sm); color: var(--c-text-2);">
+                <strong>Research</strong> — Miro, Maze, Notion, Google Forms
+              </li>
+              <li style="padding: 12px 0; border-bottom: 1px solid var(--c-border); font-size: var(--text-sm); color: var(--c-text-2);">
+                <strong>Code</strong> — HTML, CSS, JS, Git/GitHub
+              </li>
+              <li style="padding: 12px 0; border-bottom: 1px solid var(--c-border); font-size: var(--text-sm); color: var(--c-text-2);">
+                <strong>Collaboration</strong> — Jira, Confluence, Zeplin, Slack
+              </li>
+              <li style="padding: 12px 0; font-size: var(--text-sm); color: var(--c-text-2);">
+                <strong>Currently learning</strong> — Framer, Storybook
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container--wide">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2024 Sameeksha Rai</p>
+        <nav class="footer__links" aria-label="Social links">
+          <a href="#" class="footer__link">LinkedIn</a>
+          <a href="#" class="footer__link">Dribbble</a>
+          <a href="#" class="footer__link">GitHub</a>
+          <a href="mailto:hello@sameeksharai.com" class="footer__link">Email</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

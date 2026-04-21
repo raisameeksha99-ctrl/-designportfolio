@@ -1,0 +1,62 @@
+# Building a Scalable Design System
+
+> Creating a unified component library from scratch to streamline product development across four platforms.
+
+**Role:** Lead UI Designer  
+**Timeline:** 3 months  
+**Tools:** Figma, Storybook, React  
+**Deliverables:** UI Kit, Design Tokens, Documentation  
+
+---
+
+## 1. The Problem
+
+Our product ecosystem had grown organically over three years. Different teams built features in silos, leading to:
+- **Visual inconsistency:** 14 different button styles and 8 shades of "brand blue".
+- **Slow handoff:** Developers constantly guessed margins and font sizes.
+- **Wasted effort:** Designers rebuilt the same components for every new feature.
+
+We needed a single source of truth to unify the experience and speed up delivery.
+
+---
+
+## 2. The Process
+
+### Auditing the Existing UI
+I started by taking inventory of every component across our web and mobile apps. Printing out key screens and grouping similar elements helped stakeholders see the extent of the fragmentation.
+
+### Establishing the Foundation
+Before building complex components, I defined the atomic elements:
+- **Color Palette:** Reduced the palette to semantic roles (Primary, Success, Warning, Error, Surface, Text).
+- **Typography:** Set up a modular scale using a single typeface to ensure clear hierarchy.
+- **Spacing System:** Implemented a strict 8px grid.
+
+### Building the Components
+I built the library iteratively, starting with the most used elements:
+1. Buttons & Inputs
+2. Cards & Modals
+3. Navigation patterns
+
+Every component in Figma utilized Auto Layout and Variants to mirror how developers would build them in code.
+
+---
+
+## 3. The Solution
+
+The final deliverable was a comprehensive Figma UI Kit paired with a developer-facing Storybook instance. 
+
+**Key Features:**
+- **Design Tokens:** Abstracted values (like `color-primary`) to ensure updates cascade globally.
+- **Accessibility Built-in:** All text contrast ratios met WCAG AA standards by default. State changes (hover, focus) were clearly defined.
+- **Documentation:** Each component included usage guidelines, do's and don'ts, and anatomy breakdowns.
+
+---
+
+## 4. The Outcome
+
+The design system transformed how our teams worked:
+- **Faster Design Time:** UI design time for new features was reduced by 40%.
+- **Seamless Handoff:** "Pixel-pushing" conversations during QA dropped significantly.
+- **Unified Brand:** The product finally looked and felt like it was built by a single team.
+
+Creating the system wasn't just about making things look clean—it was about building infrastructure that let the team focus on solving user problems instead of recreating buttons.
