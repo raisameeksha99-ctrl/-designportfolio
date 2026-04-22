@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/blocks/*": ["../blocks/*"],
+      "@/constants/*": ["../constants/*"],
+      "@/layouts/*": ["../layouts/*"],
+      "@/patterns/*": ["../patterns/*"],
+      "@/print/*": ["../print/*"],
+      "@/ui/*": ["../ui/*"],
+      "@/utils/*": ["../utils/*"]
+    }
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

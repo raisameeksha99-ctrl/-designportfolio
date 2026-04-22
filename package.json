@@ -1,13 +1,24 @@
 {
-  "name": "design-portfolio",
-  "version": "1.0.0",
-  "description": "UX/UI Design Portfolio",
+  "name": "design-portfolio-monorepo",
   "private": true,
   "scripts": {
-    "dev": "npx live-server --port=3000",
-    "start": "npx live-server --port=3000"
+    "dev": "pnpm --filter portfolio dev",
+    "build": "pnpm --filter portfolio build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "dependencies": {
+    "@base-ui/react": "^1.4.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.8.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "path-browserify": "^1.0.1",
+    "vite": "^8.0.9"
+  }
 }
